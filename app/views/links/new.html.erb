@@ -1,0 +1,11 @@
+<h2>Generate short URL</h2>
+<form action="/create" method="POST">
+	<div>
+    <label for="original_url">Enter your URL</label>
+    <input type="text" name="original_url" placeholder="Enter URL">
+  </div>
+	<input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+  <button type="submit">Generate Short URL</button>
+</form>
+<p><%=@short_url %> </p>

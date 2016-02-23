@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  get '/:shortlink' => 'links#index'
+
+  get '/' => 'links#new'
+
+  post'/create' => 'links#create'
+
+  get '/new/:shortlink' => 'links#new'
+
+  get '/link/most_visited_pages/' => 'links#most_visited_pages'
+  
+  get '/link/last_visited_pages' => 'links#last_visited_pages'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
